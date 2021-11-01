@@ -1,0 +1,19 @@
+to build and start the docker container from scratch execute the following commands:
+
+1)docker build --pull --rm -f "Dockerfile" -t newsapp:latest "."
+
+or 
+
+the image is avilable the dockerhub and can be pulled using following command:
+
+docker pull krish1218/newsapp:latest
+
+to create the container and run container for the first time:
+
+2)docker run --name newsapp_container -p 5000:5000 newsapp:latest
+
+once the container already created, then just start to accessing the web app
+
+3)docker start newsapp_container
+
+

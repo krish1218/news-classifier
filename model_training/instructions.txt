@@ -1,0 +1,20 @@
+for mongo-spark connection to access raw data and process it:
+
+dowload  bson-xxx.jar, mongo-java-driver-xxx.jar, mongodb-driver-core-xxx.jar, mongo-spark-connector_xxx.jar 
+and place then in 'jars' directory. links given below:
+note: download the versions according to the java, mongo and pyspark verions installed on the system
+
+https://repo1.maven.org/maven2/org/mongodb/bson/
+
+https://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/
+
+https://repo1.maven.org/maven2/org/mongodb/mongodb-driver-core/
+
+https://repo1.maven.org/maven2/org/mongodb/spark/
+
+
+edit the mongodb uri in the ReadFromMongodb.py to connect pyspark to mongodb (local,cloud,docker,etc)
+
+now run the text_classification.py to read the rawdata from mongodb , process it, train the model and save the model and vectorizer pkl files
+
+  

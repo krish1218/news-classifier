@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>NEWS Classification</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="{{ url_for('static',filename='fonts/material-design-iconic-font/css/material-design-iconic-font.min.css') }}">
+		<!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}"> -->
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="/prediction" method="post" id="form1">
+					<h3>NEWS Classification</h3>
+					<p>Please enter the text below in the text area and submit to classify : </p>
+
+					<label class="form-group" >
+						<textarea name="summary_text" id="" class="form-control" required form="form1"></textarea>
+						<span for="">Your Message</span>
+						<span class="border"></span>
+					</label>
+					<button form="form1">Submit 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<label class="form-group">
+						
+						<span for="">Result: <h4> {{output}}</h4> </span>
+
+					</label>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
